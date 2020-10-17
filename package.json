@@ -1,0 +1,26 @@
+{
+  "name": "medium-api",
+  "version": "1.0.0",
+  "description": "This is an Medium API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "standard --fix | snazzy"
+  },
+  "keywords": [
+    "trending",
+    "articles"
+  ],
+  "author": "ivanm117, m8a98, DevHaro, axeldelat",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.4"
+  }
+}
