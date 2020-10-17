@@ -129,4 +129,27 @@ router.patch('/:id', async (request, response) => {
   }
 })
 
+router.put('/:id', async (request, response) => {
+  try {
+    const { id } = request.params
+    const newDataEntry = request.body
+
+    const entryUpdated = await entries.updateById(id, newDataEntry)
+
+    response.json({
+      success: true,
+      message: 'Entry updated',
+      data: {
+        entries: entryUpdated
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      error: error.message
+    })
+  }
+})
+
 module.exports = router

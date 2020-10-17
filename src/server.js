@@ -2,13 +2,13 @@
 
 const express = require('express')
 
-// const entriesRouter = require('./routes/entries')
+const entriesRouter = require('./routes/entries')
 
 const app = express()
 
 app.use(express.json())
 
-// app.use('/entries', entriesRouter)
+app.use('/entries', entriesRouter)
 
 app.get('/', (req, res) => {
   res.json({
