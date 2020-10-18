@@ -20,7 +20,7 @@ const entriesSchema = mongoose.Schema({
     required: true
   },
   featured: {
-    type: String,
+    type: Boolean,
     required: true
   },
   editorsPick: {
