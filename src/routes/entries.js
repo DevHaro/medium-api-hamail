@@ -1,4 +1,3 @@
-const { request, response } = require('express')
 const express = require('express')
 const entries = require('../usecases/entries')
 const router = express.Router()
@@ -25,24 +24,7 @@ router.get('/', async (request, response) => {
 
 router.post('/', async (request, response) => {
   try {
-    const {
-      title,
-      date,
-      readTime,
-      description,
-      isFav,
-      img,
-      author
-    } = request.body
-    if (!title) { throw new Error('Title is required') }
-    if (!date) { throw new Error('Date is required') }
-    if (!readTime) { throw new Error('Read time is required') }
-    if (!description) { throw new Error('Description is required') }
-    if (isFav == null) { throw new Error('Is favorite is required') }
-    if (!img) { throw new Error('Img is required') }
-    if (!author) { throw new Error('Author is required') }
-
-    const newEntry = await entries.create({ title, date, readTime, description, isFav, img, author })
+    const newEntry = await entries.create(request.body)
 
     response.json({
       success: true,

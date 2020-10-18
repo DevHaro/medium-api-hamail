@@ -11,25 +11,39 @@ const entriesSchema = mongoose.Schema({
     type: Date,
     required: true
   },
-  readTime: {
+  timeToRead: {
     type: Number,
     required: true
   },
-  description: {
+  content: {
     type: String,
     required: true
   },
-  isFav: {
+  featured: {
+    type: String,
+    required: true
+  },
+  editorsPick: {
     type: Boolean,
     required: true
   },
-  img: {
+  popular: {
+    type: Boolean,
+    required: true
+  },
+  imageUrl: {
+    type: String,
+    required: true
+  },
+  category: {
     type: String,
     required: true
   },
   author: {
-    type: String
+    type: String,
+    required: true
   }
 })
 
 module.exports = mongoose.model('entries', entriesSchema)
+// isFav

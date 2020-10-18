@@ -1,12 +1,13 @@
 // Definición del Servidor
 
 const express = require('express')
-
+const cors = require('cors')
 const entriesRouter = require('./routes/entries')
 
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.use('/entries', entriesRouter)
 
