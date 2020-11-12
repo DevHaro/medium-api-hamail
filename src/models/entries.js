@@ -7,6 +7,10 @@ const entriesSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  subtitle: {
+    type: String,
+    required: true
+  },
   date: {
     type: Date,
     required: true
@@ -40,6 +44,10 @@ const entriesSchema = mongoose.Schema({
     required: true
   },
   author: {
+    type: String,
+    required: true
+  },
+  authorImage: {
     type: String,
     required: true
   }
