@@ -9,7 +9,7 @@ const entriesSchema = mongoose.Schema({
   },
   subtitle: {
     type: String,
-    required: true
+    required: false
   },
   date: {
     type: Date,
@@ -25,15 +25,15 @@ const entriesSchema = mongoose.Schema({
   },
   featured: {
     type: Boolean,
-    required: true
+    required: false
   },
   editorsPick: {
     type: Boolean,
-    required: true
+    required: false
   },
   popular: {
     type: Boolean,
-    required: true
+    required: false
   },
   imageUrl: {
     type: String,
@@ -41,7 +41,7 @@ const entriesSchema = mongoose.Schema({
   },
   category: {
     type: String,
-    required: true
+    required: false
   },
   author: {
     type: String,
@@ -49,7 +49,7 @@ const entriesSchema = mongoose.Schema({
   },
   authorImage: {
     type: String,
-    required: true
+    required: false
   }
 })
 
